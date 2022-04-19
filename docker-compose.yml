@@ -1,0 +1,12 @@
+version: '3'
+services:
+  go-python-node:
+    container_name: go-python-node
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Asia/Tokyo
+    volumes:
+      - ./docs:/docs
+      - ./debug:/debug
